@@ -17,7 +17,7 @@ pipeline {
 
         stage('Tag Image') {
             steps {
-                bat 'docker tag external:latest dbhavana:external:latest'
+                bat 'docker tag external:latest dbhavana/external:latest'
                 bat 'docker push dbhavana/external:latest'
         }
         }
