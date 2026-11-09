@@ -2,7 +2,7 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY . .
+COPY [. /app]
 
 RUN pip install flask
 
