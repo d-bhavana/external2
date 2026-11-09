@@ -20,7 +20,7 @@ pipeline {
                 bat 'docker tag external:latest dbhavana/external:latest'
                 bat 'docker push dbhavana/external:latest'
         }
-
+        }
         stage('Deploy to Kubernetes') {
             steps {
                 bat 'kubectl apply -f deployment.yaml'
