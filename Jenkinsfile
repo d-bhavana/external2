@@ -18,13 +18,7 @@ pipeline {
         stage('Tag Image') {
             steps {
                 bat 'docker tag external:latest dbhavana/external:latest'
-            }
-        }
-
-        stage('Push to Docker Hub') {
-            steps {
                 bat 'docker push dbhavana/external:latest'
-            }
         }
 
         stage('Deploy to Kubernetes') {
